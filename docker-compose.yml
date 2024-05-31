@@ -11,7 +11,7 @@ services:
     deploy:
      placement:
        constraints:
-        - node.labels.role==backend
+        - node.labels.role == backend
     container_name: backend
     ports:
       - "5000:5000"
@@ -34,7 +34,7 @@ services:
     deploy:
      placement:
        constraints:
-        - node.labels.role==frontend
+        - node.labels.role == frontend
 
     container_name: frontend
     ports:
