@@ -7,7 +7,7 @@ services:
     build:
       context: ./server
       dockerfile: Dockerfile
-    image: shubham4467/mern-backend:v1  
+    image: sohanhk07/backend:v1  
     deploy:
      placement:
        constraints:
@@ -30,7 +30,7 @@ services:
     build:
       context: ./client
       dockerfile: Dockerfile
-    image: shubham4467/mern-forntend:v1
+    image: sohanhk07/forntend:v1
     deploy:
      placement:
        constraints:
