@@ -7,7 +7,11 @@ services:
     build:
       context: ./server
       dockerfile: Dockerfile
-      
+    image: shubham4467/mern-backend:v1  
+    deploy:
+     placement:
+       constraints:
+        - node.labels.role==backend
     container_name: backend
     ports:
       - "5000:5000"
@@ -26,6 +30,11 @@ services:
     build:
       context: ./client
       dockerfile: Dockerfile
+    image: shubham4467/mern-forntend:v1
+    deploy:
+     placement:
+       constraints:
+        - node.labels.role==frontend
 
     container_name: frontend
     ports:
